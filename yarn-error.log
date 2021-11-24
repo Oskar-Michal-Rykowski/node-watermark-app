@@ -1,0 +1,41 @@
+Arguments: 
+  C:\Program Files (x86)\nodejs\node.exe C:\Users\oskar\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add jump@0.6.4
+
+PATH: 
+  C:\Users\oskar\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\oskar\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\oskar\Documents\Java_programowanie\Jdk_11\jdk-11.0.10+9\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\nodejs;C:\Program Files\heroku\bin;C:\Users\oskar\AppData\Local\Microsoft\WindowsApps;C:\Users\oskar\AppData\Local\atom\bin;C:\Users\oskar\AppData\Roaming\npm;C:\Users\oskar\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\heroku\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  14.17.0
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  Error: https://github.com/afriggeri/node-charm/tarball/master: Request failed "404 Not Found"
+      at ResponseError.ExtendableBuiltin (C:\Users\oskar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:696:66)
+      at new ResponseError (C:\Users\oskar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:802:124)
+      at Request.<anonymous> (C:\Users\oskar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66210:16)
+      at Request.emit (events.js:376:20)
+      at Request.module.exports.Request.onRequestResponse (C:\Users\oskar\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141762:10)
+      at ClientRequest.emit (events.js:376:20)
+      at HTTPParser.parserOnIncomingClient (_http_client.js:647:27)
+      at HTTPParser.parserOnHeadersComplete (_http_common.js:126:17)
+      at TLSSocket.socketOnData (_http_client.js:515:22)
+      at TLSSocket.emit (events.js:376:20)
+
+npm manifest: 
+  {
+    "name": "watermark-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
