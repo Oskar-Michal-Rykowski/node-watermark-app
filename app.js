@@ -73,14 +73,7 @@ const startApp = async () => {
     },
   ]);
 
-  if (options.watermarkType === 'Text watermark') {
-    const text = await inquirer.prompt([
-      {
-        name: 'value',
-        type: 'input',
-        message: 'Type your watermark text:',
-      },
-    ]);
+  function putTextOnImage(text) {
     options.watermarkText = text.value;
     if (fs.existsSync(`./img/${options.inputImage}`)) {
       addTextWatermarkToImage(
@@ -91,15 +84,9 @@ const startApp = async () => {
     } else {
       console.log('Something went wrong... Try again');
     }
-  } else {
-    const image = await inquirer.prompt([
-      {
-        name: 'filename',
-        type: 'input',
-        message: 'Type your watermark name:',
-        default: 'logo.png',
-      },
-    ]);
+  }
+
+  function putImageOnImage(image) {
     options.watermarkImage = image.filename;
     if (
       fs.existsSync(`./img/${options.inputImage}`) &&
@@ -113,6 +100,30 @@ const startApp = async () => {
     } else {
       console.log('Something went wrong... Try again');
     }
+  }
+
+  switch (options.watermarkType) {
+    case 'Text watermark':
+      const text = await inquirer.prompt([
+        {
+          name: 'value',
+          type: 'input',
+          message: 'Type your watermark text:',
+        },
+      ]);
+      putTextOnImage(text);
+
+      break;
+    default:
+      const image = await inquirer.prompt([
+        {
+          name: 'filename',
+          type: 'input',
+          message: 'Type your watermark name:',
+          default: 'logo.png',
+        },
+      ]);
+      putImageOnImage(image);
   }
 };
 
