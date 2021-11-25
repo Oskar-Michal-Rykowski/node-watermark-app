@@ -114,7 +114,7 @@ const startApp = async () => {
       putTextOnImage(text);
 
       break;
-    default:
+    case 'Image watermark':
       const image = await inquirer.prompt([
         {
           name: 'filename',
@@ -124,6 +124,7 @@ const startApp = async () => {
         },
       ]);
       putImageOnImage(image);
+      break;
   }
 };
 
