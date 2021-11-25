@@ -81,3 +81,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Products 
+
+test-with-watermark.jpg
