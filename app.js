@@ -98,7 +98,7 @@ const startApp = async () => {
         './img/' + options.watermarkImage
       );
     } else {
-      console.log('Something went wrong... Try again');
+      console.log('Something went wrong.... Try again');
     }
   }
 
